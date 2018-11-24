@@ -1,0 +1,120 @@
+GitHub Tutorial
+
+Create Account At Github
+ 
+Create an account at Github.
+The URL of Github is https://github.com
+If You don’t have github account then click SignUp for Github button.
+If You have github account then click SignIN button.
+ 
+Create Repository
+ 
+If you want create new Repository then click New Repository Button. After create repository you will get a ssh link for connect github from desktop command prompt. Like https://github.com/DemoGit/demo_maven.git
+ 
+Install git at your machine
+ 
+Install git at your windows  machine from https://windows.github.com
+
+Install git at your linux  machine :
+
+sudo apt-get update
+sudo apt-get install git
+ 
+Now that you have git installed 
+Configure git :
+
+git config --global user.name "Your Name"
+git config --global user.email "youremail@domain.com"
+
+Connect Git via machine
+ 
+1.       Create directory where you want to store your repo
+mkdir TestGit
+ 
+2.       After create directory enter in directory
+cd TestGit/
+
+3.       Clone the repository at your machine by link which is provide by git at the time of create repository
+
+git clone  https://github.com/DemoGit/demo_maven.git
+ 
+4.       After successful cloning repo at your machine check the repository and enter in repo
+cd demo_maven
+
+5.  For get branch
+git branch
+
+6.  Gor check update –
+git status
+
+7.  Add Folder of file in git –
+git add .
+
+8.       After this commit and add comment –
+git commit -am "add new project”
+
+9.       If ask for mail-
+git config --global user.email "emailaddress"
+
+10.   If ask Username –
+git config --global user.name "name"
+
+11.   Push at master –
+ 	git push origin master
+
+12.   For check Configuration –
+ 	git config --list
+Create new Subbranch
+ 
+1.       Create sunbranch of master in web test_demo
+2.       For add master code in subbranch –
+git pull
+git pull origin audi
+3.       Then it give all sub branch name
+4.       For pull in specific branch give  branch name –
+git checkout test_demo
+5.       Now we enter in subbranch.
+6.  For get branch –
+git branch
+7.       Repeat procedure 7-11 of Connect Git via machine if any changes.
+8.       For add changes in master click compare and pull request at web.
+9.       Step 1: From your project repository, bring in the changes and test.
+      	git fetch origin
+   	git checkout -b test_demo origin/test_demo
+   	git merge master
+Step 2: Merge the changes and update on GitHub.
+      	git checkout master
+   	git merge --no-ff test_demo
+   	git push origin master
+10.    Check Subbranch and master at web manually    	
+git checkout master & git merge --no-ff test_demo &git push origin master
+ 
+Setting your email address for every repository on your computer
+
+Open Terminal (for Mac and Linux users) or the command line (for Windows users).
+
+Set your email address with the following command:
+git config --global user.email "your_email@example.com"
+
+Confirm that you have set your email address correctly with the following command.
+git config --global user.email
+# your_email@example.com
+
+
+Commit on Branch
+Check branch
+git status 
+Change Branch
+git checkout  SLJuly2015
+Commit to branch 
+git push origin SLJuly2015
+
+Setting your email address for a single repository
+You may need to set a different email address for a single repository, such as a work email address for a work-related project.
+Open Terminal (for Mac and Linux users) or the command line (for Windows users).
+Change the current working directory to the local repository in which you want to set your Git config email.
+Set your email address with the following command:
+git config user.email "your_email@example.com"
+Confirm that you have set your email address correctly with the following command.
+git config user.email
+your_email@example.com
